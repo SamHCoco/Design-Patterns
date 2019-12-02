@@ -7,7 +7,7 @@ They fall into 3 categories:
 
 **Creational**: Design patterns for instantiating objects.
 
-**Structural**: Design patterns for how classes and objects can be composed.
+**Structural**: Design patterns focused on easing design by examining how classes inherit and how they can be composed with other classes, by examining their relationships.
 
 **Behavioural**: Design patterns for handling interaction between objects.
 
@@ -27,3 +27,8 @@ Objects are designed to be cloneable, so that a required object can be cloned fr
 It is typically used when we need to perform multiple different operations on the same object.
 
 ### Structural Design Patterns
+
+#### Adapter
+The adapter pattern is designed to allow objects with incompatible interfaces to collaborate.
+
+With the object adapter pattern, we implement a class that bridges the difference between an expected interface and an existing class. *(Note: Interface is the collection of all the methods that an object has)*
