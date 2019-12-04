@@ -1,4 +1,4 @@
-# OOP Design Patterns
+# OOP Design Patterns - Java
 
 ### Introduction
 Software patterns are industry standard "best practice" templates for solving frequently occurring problems.
@@ -16,6 +16,7 @@ They fall into 3 categories:
 ##### Singleton
 This pattern ensures that only a single instance of a class is ever instantiated during an application's runtime.
 
+
 ##### Factory
 This pattern is used when a method needs to return an instance of one of several sub-classes that all share the same super class, but we do not know ahead of time which sub class (for example, this could be determined by user input).
 
@@ -28,7 +29,19 @@ It is typically used when we need to perform multiple different operations on th
 
 ### Structural Design Patterns
 
-#### Adapter
+##### Adapter
 The adapter pattern is designed to allow objects with incompatible interfaces to collaborate.
 
 With the object adapter pattern, we implement a class that bridges the difference between an expected interface and an existing class. *(Note: Interface is the collection of all the methods that an object has)*
+
+##### Composite
+This pattern composes objects into a hierarchical tree structure, made up of individual objects, *Leafs*, and compositions of objects, *Composites*).
+
+It is defined by 4 key concepts:
+- *Component* - The base interface (or abstract class) for all objects in the composition. All objects in composite tree implement it.
+
+- *Leaf* -
+
+- *Composite* -
+
+- *Client* -
