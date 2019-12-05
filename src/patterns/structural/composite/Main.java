@@ -3,14 +3,18 @@ package patterns.structural.composite;
 public class Main {
 
     public static void main(String[] args) {
-        Division div1 = new Division("Division 1");
+        Army army = new Army("Army 1");
 
-        ArmyComponent brig1 = new Brigade("Storm Brigade", 250);
-        ArmyComponent brig2 = new Brigade("Shock Brigade", 500);
+        Division division = new Division("Division 1");
 
-        div1.addBrigade(brig1);
-        div1.addBrigade(brig2);
+        ArmyComponent brigade1 = new Brigade("Brigade 1A", 250);
+        ArmyComponent brigade2 = new Brigade("Brigade 1B", 500);
 
-        div1.countSoldiers();
+        division.addBrigade(brigade1);
+        division.addBrigade(brigade2);
+
+        army.addDivision(division);
+
+        army.countSoldiers();
     }
 }
