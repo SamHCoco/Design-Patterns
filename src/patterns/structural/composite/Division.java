@@ -25,7 +25,7 @@ public class Division implements ArmyComponent{
             for(ArmyComponent component : components){
                 result += component.countSoldiers();
             }
-            System.out.println("Brigade " + name + " has " + result + " soldiers");
+            System.out.println(name + ": " + result + " soldiers");
         }
         return result;
     }
