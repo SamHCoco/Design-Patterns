@@ -35,13 +35,11 @@ The adapter pattern is designed to allow objects with incompatible interfaces to
 With the object adapter pattern, we implement a class that bridges the difference between an expected interface and an existing class. *(Note: Interface is the collection of all the methods that an object has)*
 
 ##### Composite
-This pattern composes objects into a hierarchical tree structure, made up of individual objects, *Leafs*, and compositions of objects, *Composites*).
+This pattern composes objects into a hierarchical tree structure, made up of individual objects, *Leaf(s)*, and compositions of objects, *Composites*. All methods present in leaf objects must also be present in composite objects. This is ensured by having *leaf* and *composite* objects implement a **common interface**.
 
-It is defined by 4 key concepts:
+It is defined by 3 key concepts:
 - *Component* - The base interface (or abstract class) for all objects in the composition. All objects in composite tree implement it.
 
-- *Leaf* -
+- *Leaf* - A Leaf is an individual object that has no composites.
 
-- *Composite* -
-
-- *Client* -
+- *Composite* - An object that has a reference to another object, which may be a leaf or a composite.
