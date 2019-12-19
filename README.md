@@ -27,6 +27,11 @@ Objects are designed to be cloneable, so that a required object can be cloned fr
 
 It is typically used when we need to perform multiple different operations on the same object.
 
+##### Builder
+This pattern is used when we need to instantiate complex objects, such as an object with *large number of fields to be initialized* upon instantiation.
+
+The aim of this pattern is to separate the construction of an object from its internal representation, by having a separate **'Builder'** class handle the object's construction (instantiation). This Builder class allows for a high degree of user control during an object's creation, allowing the same process to create different representations of the complex object.
+
 ### Structural Design Patterns
 
 ##### Adapter
