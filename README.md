@@ -19,6 +19,22 @@ This pattern ensures that only a single instance of a class is ever instantiated
 
 ##### Factory
 This pattern is used when a method needs to return an instance of one of several sub-classes that all share the same super class, but we do not know ahead of time which sub class (for example, this could be determined by user input).
+```java
+public class EnemyFactory {
+
+    public Enemy createEnemy(int choice){
+        switch(choice){
+            case 0:
+                return new DarkMage();
+            case 1:
+                return new Slime();
+            default:
+                return null;
+        }
+    }
+}
+```
+
 
 ##### Prototype
 This pattern is used when creating an object that is costly in terms of time or computing resources, for example instantiating an object with a large amount of data from a database.
@@ -31,6 +47,53 @@ It is typically used when we need to perform multiple different operations on th
 This pattern is used when we need to instantiate complex objects, such as an object with *large number of fields to be initialized* upon instantiation.
 
 The aim of this pattern is to separate the construction of an object from its internal representation, by having a separate **'Builder'** class handle the object's construction (instantiation). This Builder class allows for a high degree of user control during an object's creation, allowing the same process to create different representations of the complex object.
+
+```java
+public static void main(String[] args) {
+    Computer computer = new ComputerBuilder()
+            .setCPU("Intel i5")
+            .setGraphicsCard("GTX 660")
+            .setHDD("500 GB")
+            .setRAM(8)
+            .build();
+}
+```
+
+```java
+public class ComputerBuilder {
+
+    private int ram;
+    private String hdd;
+    private String graphicsCard;
+    private String cpu;
+
+    public ComputerBuilder setCPU(String cpu) {
+        this.cpu = cpu;
+        return this;
+    }
+
+    public ComputerBuilder setRAM(int ram) {
+        this.ram = ram;
+        return this;
+    }
+
+    public ComputerBuilder setGraphicsCard(String graphicsCard) {
+        this.graphicsCard = graphicsCard;
+        return this;
+    }
+
+    public ComputerBuilder setHDD(String hdd) {
+        this.hdd = hdd;
+        return this;
+    }
+
+    public Computer build(){
+        Computer computer = new Computer(ram, hdd, graphicsCard, cpu);
+        System.out.println(computer);
+        return computer;
+    }
+}
+```
 
 ### Structural Design Patterns
 
